@@ -1,0 +1,18 @@
+<md-card flex-gt-sm="90" flex-gt-md="80">
+    <md-card-content>
+        <md-list>
+            <md-subheader class="md-no-sticky" ng-if="!loading">
+                <span ng-if="filters.q">Pesquisa por <strong>"{{filters.q}}"</strong>. </span>
+                <span ng-if="count <= 0">Nehum item encontrado.</span>
+                <span ng-if="count == 1">Foi encontrado <strong>{{count}}</strong> item.</span>
+                <span ng-if="count > 1">Foram encontrados <strong>{{count}}</strong> itens.</span>
+            </md-subheader>
+            <md-list-item ng-repeat="post in posts">
+                <p> <strong>{{ post.id }}</strong> {{ post.title }} </p>
+            </md-list-item>
+    </md-card-content>
+    <div layout="row" layout-align="center center" ng-if="loading" style="padding-bottom: 20px;">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <!--<df-button caption="'carregar +'" action="{ exec: loadMore }"></df-button>-->
+</md-card>

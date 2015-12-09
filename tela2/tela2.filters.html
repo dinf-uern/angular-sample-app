@@ -1,0 +1,10 @@
+<form layout="column" layout-padding ng-controller="Tela2FiltersCtrl">
+    <md-input-container class="md-icon-float md-block">
+        <!-- Use floating label instead of placeholder -->
+        <label>Pesquisar</label>
+        <md-icon md-svg-src="https://raw.githubusercontent.com/google/material-design-icons/master/action/svg/production/ic_search_24px.svg" class="name"></md-icon>
+        <input ng-model="filters.q" type="text">
+    </md-input-container>
+    <df-button caption="'aplicar'" action="{ state: 'main.tela2', params:filters }" hide-df-sidenavs="true"></df-button>
+    <df-button caption="'limpar'" action="{ exec: limpar }" hide-df-sidenavs="true"></df-button>
+</form>

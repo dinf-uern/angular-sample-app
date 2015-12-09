@@ -1,0 +1,25 @@
+<df-topbar caption="getTitle()" left-buttons="getLeftButtons()" right-buttons="getRightButtons()" show-menu-on-media="'gt-md'">
+</df-topbar>
+<section layout="row" flex>
+    <df-sidenav side="left"
+                small-medias="['sm', 'md']"
+                large-medias="'gt-md'"
+                fixed-on-small="getLeftSidenavFixedOnSmall()"
+                fixed-on-large="getLeftSidenavFixedOnLarge()"
+                partial-on-small="getLeftSidenavPartialOnSmall()"
+                partial-on-large="getLeftSidenavPartialOnLarge()">
+    </df-sidenav>
+    <md-content flex md-scroll-y lr-infinite-scroll="scrollReachedEnd">
+        <div layout="column" layout-fill layout-padding>
+            <div layout="row" layout-align="center center" ui-view></div>
+        </div>
+        <df-float-actions buttons="getFloatingButtons()"></df-float-actions>
+    </md-content>
+    <df-sidenav side="right"
+                small-medias="['sm', 'md']"
+                large-medias="'gt-md'"
+                fixed-on-small="getRightSidenavFixedOnSmall()"
+                fixed-on-large="getRightSidenavFixedOnLarge()"
+                partial-on-small="getRightSidenavPartialOnSmall()"
+                partial-on-large="getRightSidenavPartialOnLarge()">
+</section>
